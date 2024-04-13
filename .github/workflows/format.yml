@@ -1,0 +1,21 @@
+on:
+  push:
+    branches:
+      - '*'
+      - '!release'
+
+name: format
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          components: rustfmt, clippy
+      - uses: mbrobbel/rustfmt-check@master
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Rustfmt Check
+        uses: actions-rust-lang/rustfmt@v1
