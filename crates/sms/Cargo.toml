@@ -1,0 +1,30 @@
+[package]
+name = "tencentcloud-sdk-rs-sms"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+documentation.workspace = true
+readme.workspace = true
+categories.workspace = true
+description = "tencent cloud sms rust sdk"
+keywords = ["tencent", "tencent-cloud", "sms", "sdk"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tencentcloud-sdk-rs-core = { workspace = true, default-features = false }
+crypto-hash.workspace = true
+hex.workspace = true
+hmac.workspace = true
+sha2.workspace = true
+reqwest = { workspace = true, features = ["json"] }
+serde = { workspace = true, features = ["derive"] }
+chrono.workspace = true
+serde_json.workspace = true
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["full"] }
