@@ -16,11 +16,11 @@ categories.workspace = true
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-tencentcloud-sdk-rs-core = { path = "../core" }
-crossbeam-channel = "0.5.15"
-reqwest = { version = "0.11.27", features = ["json"] }
-tokio = { version = "1.38.2", features = ["full"] }
-serde = { version = "1.0.219", features = ["derive"] }
-clap = { version = "4.0.32", features = ["derive"] }
-toml = "0.5.11"
-daemonize = "0.4.1"
+tencentcloud-sdk-rs-core = { workspace = true }
+crossbeam-channel = { workspace = true }
+reqwest = { workspace = true }
+tokio = { workspace = true }
+serde = { workspace = true }
+clap = { workspace = true }
+toml = { workspace = true }
+daemonize = { workspace = true }
